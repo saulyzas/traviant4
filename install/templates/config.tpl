@@ -57,7 +57,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
 			<td><select name="reg_open" dir="ltr" class="text">
 	  <option value="false">Close</option>
 	  <option value="true" selected="selected">Open</option></select></td>
-		</tr>      
+		</tr>
     	<tr class="hover">
 			<td>Home Page:</td>
 			<td><input name="homepage" dir="ltr" class="text" type="text" id="homepage" value="http://<?php echo $_SERVER['HTTP_HOST']; ?>/"></td>
@@ -106,7 +106,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
 	  <option value="518400">6 Days</option>
 	  <option value="604800" selected="selected">7 Days</option></select></td>
 		</tr>
-        
+
         <tr class="hover">
 			<td>Auction Duration:</td>
 			<td><select name="auction_time" dir="ltr" class="text">
@@ -143,7 +143,7 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
 		<option value="1">Normal</option>
 		<option value="2">Christmas</option>
 		<option value="3">New Year</option>
-		<option value="4">Easter</option>				
+		<option value="4">Easter</option>
 		</select></td>
 		</tr>
     	<tr class="hover">
@@ -178,9 +178,9 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
     	<tr class="hover">
 			<td>Type:</td>
 			<td><select name="connectt" dir="ltr" class="text">
-	  <option value="0" selected="selected">MYSQL</option>
-	  <option value="1" disabled="disabled">MYSQLi</option>
-	</select></td>
+                <option value="0" selected="selected">MYSQL</option>
+                <option value="1">MYSQLi</option>
+            </select></td>
 		</tr>
         <tr class="empty"><td></td><td></td></tr>
     	<tr class="hover">
@@ -196,9 +196,8 @@ echo "<div class=\"headline\"><span class=\"f10 c5\">Error creating constant.php
 			<td><select name="admin_rank" dir="ltr" class="text">
 	  <option value="false" selected="selected">NO</option>
 	  <option value="true">Yes</option></select></td>
-		</tr>        
-        
-        
+		</tr>
+
 </table>
 </div>
 <div id="statRight" class="top10Wrapper">

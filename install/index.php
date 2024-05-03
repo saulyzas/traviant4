@@ -34,7 +34,7 @@
             <div id="mid">
                 <div id="side_navi">
                     <ul>
-                        <?php include("templates/menu.tpl"); ?>
+                        <?php include("templates/menu.php"); ?>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -45,26 +45,26 @@
                             <h1 class="titleInHeader">TravianT4 Installation Script</h1>
                             <?php
                             if (!isset($_GET['s'])) {
-                                include("templates/greet.tpl");
+                                include("templates/greet.php");
                             } else {
                                 switch ($_GET['s']) {
                                     case 1:
-                                        include("templates/config.tpl");
+                                        include("templates/config.php");
                                         break;
                                     case 2:
-                                        include("templates/dataform.tpl");
+                                        include("templates/dataform.php");
                                         break;
                                     case 3:
-                                        include("templates/field.tpl");
+                                        include("templates/field.php");
                                         break;
                                     case 4:
-                                        include("templates/multihunter.tpl");
+                                        include("templates/multihunter.php");
                                         break;
                                     case 5:
-                                        include("templates/oasis.tpl");
+                                        include("templates/oasis.php");
                                         break;
                                     case 6:
-                                        include("templates/end.tpl");
+                                        include("templates/end.php");
                                         break;
                                 }
                             }

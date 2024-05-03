@@ -1,8 +1,8 @@
-<?php 
+<?php
 #################################################################################
 ##              -= YOU MAY NOT REMOVE OR CHANGE THIS NOTICE =-                 ##
 ## --------------------------------------------------------------------------- ##
-##  Filename       config.tpl                                                  ##
+##  Filename       config.php                                                  ##
 ##  Developed by:  Dzoki                                                       ##
 ##  License:       TravianX Project                                            ##
 ##  Copyright:     TravianX (c) 2010-2011. All rights reserved.                ##
@@ -18,33 +18,33 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 
 ?>
 <style>
-.del {width:12px; height:12px; background-image: url(img/admin/icon/del.gif);} 
-</style>  
+.del {width:12px; height:12px; background-image: url(img/admin/icon/del.gif);}
+</style>
 <form action="process.php" method="post">
 <table id="member">
   <thead>
     <tr>
         <th>~ Server Settings ~</th>
     </tr>
-  </thead> 
+  </thead>
 
 </table>
-<table id="profile">    
+<table id="profile">
     <tr>
         <td class="b">Variable</td>
-        <td class="b">Value</td> 
-    </tr> 
+        <td class="b">Value</td>
+    </tr>
     <tr>
         <td>Server Name</td>
-        <td><input type="text" dir="ltr" class="text" name="servername" id="servername" value="<?php echo SERVER_NAME;?>"></td>    
-    </tr> 
+        <td><input type="text" dir="ltr" class="text" name="servername" id="servername" value="<?php echo SERVER_NAME;?>"></td>
+    </tr>
  <tr>
 
         <td>Server Started</td>
 
-        <td><?php echo date("d.m.y H:i",COMMENCE);?></td>   
+        <td><?php echo date("d.m.y H:i",COMMENCE);?></td>
 
-    </tr>  
+    </tr>
     <tr>
         <td>Language</td>
         <td>
@@ -59,21 +59,21 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="en" <?php echo $sts; ?>>English</option>
 		<option value="fa" <?php echo $sts2; ?>>Persian</option>
         </select>
-        
-        </td>  
-    </tr>  
-    <tr>  
+
+        </td>
+    </tr>
+    <tr>
         <td>Server Speed</td>
-        <td><?php echo ''.SPEED.'x';?></td>    
-    </tr>  
+        <td><?php echo ''.SPEED.'x';?></td>
+    </tr>
     <tr>
         <td>Map Size</td>
-        <td><?php echo WORLD_MAX;?> x <?php echo WORLD_MAX;?></td>    
-    </tr>  
+        <td><?php echo WORLD_MAX;?> x <?php echo WORLD_MAX;?></td>
+    </tr>
 	<tr>
         <td>Troop Speed</td>
-        <td><?php echo INCREASE_SPEED;?>x</td>    
-    </tr> 
+        <td><?php echo INCREASE_SPEED;?>x</td>
+    </tr>
 		<tr>
 
         <td>Village Expanding Speed</td>
@@ -83,16 +83,16 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 				}
 				else if(CP == 1){
 				echo "Slow";
-				} ?></td> 
+				} ?></td>
 
-    </tr>   
+    </tr>
     <tr>
 
         <td>Beginners Protection</td>
 
-        <td><?php echo (PROTECTION/3600*SPEED);?> hour/s</td> 
+        <td><?php echo (PROTECTION/3600*SPEED);?> hour/s</td>
 
-    </tr>    	
+    </tr>
 	<tr>
 
         <td>Activation Mail</td>
@@ -109,14 +109,14 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="true" <?php echo $sts; ?>>Enabled</option>
 		<option value="false" <?php echo $sts2; ?>>Disabled</option>
         </select>
-        </td> 
-				
+        </td>
 
-    </tr> 
+
+    </tr>
 	<tr>
 
         <td>Quest</td>
-		
+
         <td>
         <?php if(QUEST == true){
 				$sts = "selected=\"selected\"";
@@ -129,19 +129,19 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="true" <?php echo $sts; ?>>Enabled</option>
 		<option value="false" <?php echo $sts2; ?>>Disabled</option>
         </select>
-        </td> 
-       
+        </td>
 
-    </tr>    
-	
+
+    </tr>
+
 	<tr>
 
         <td>Demolish - Level required</td>
 
-        <td><?php echo DEMOLISH_LEVEL_REQ; ?></td> 
+        <td><?php echo DEMOLISH_LEVEL_REQ; ?></td>
 
-    </tr>  
-	
+    </tr>
+
 	<tr>
 
         <td>World Wonder - Statistics</td>
@@ -158,9 +158,9 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="true" <?php echo $sts; ?>>Enabled</option>
 		<option value="false" <?php echo $sts2; ?>>Disabled</option>
         </select>
-        </td> 
+        </td>
 
-    </tr>  
+    </tr>
 	<tr>
 
         <td><b><font color='#71D000'>P</font><font color='#FF6F0F'>l</font><font color='#71D000'>u</font><font color='#FF6F0F'>s</font></b> account duration</td>
@@ -169,10 +169,10 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 			echo ''.(PLUS_TIME/86400).' Days';
 			} else if(PLUS_TIME < 86400){
 			echo ''.(PLUS_TIME/3600).' Hours';
-			} ?></td> 
+			} ?></td>
 
-    </tr>  
-	
+    </tr>
+
 	<tr>
 
         <td>+25% production duration</td>
@@ -181,124 +181,124 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 			echo ''.(PLUS_PRODUCTION/86400).' Days';
 			} else if(PLUS_PRODUCTION < 86400){
 			echo ''.(PLUS_PRODUCTION/3600).' Hours';
-			} ?></td> 
+			} ?></td>
 
-    </tr>  
+    </tr>
 	</table>
-	
+
 <table id="member">
   <thead>
     <tr>
         <th>~ Log Settings ~</th>
     </tr>
   </thead>
-</table>  
-  
-  <table id="profile">  
+</table>
+
+  <table id="profile">
   <tr>
         <td class="b">Variable</td>
-        <td class="b">Value</td> 
-    </tr> 
+        <td class="b">Value</td>
+    </tr>
     <tr>
         <td>Log Build</td>
         <td><?php if(LOG_BUILD == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_BUILD == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>    
+				?></td>
+    </tr>
     <tr>
         <td>Log Technology</td>
         <td><?php if(LOG_TECH == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_TECH == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>    
+				?></td>
+    </tr>
     <tr>
         <td>Log Login</td>
         <td><?php if(LOG_LOGIN == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_LOGIN == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>    
+				?></td>
+    </tr>
     <tr>
         <td>Log Gold</td>
         <td><?php if(LOG_GOLD_FIN == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(ALOG_GOLD_FIN == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>    
+				?></td>
+    </tr>
     <tr>
         <td>Log Admin</td>
         <td><?php if(LOG_ADMIN == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_ADMIN == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>     
+				?></td>
+    </tr>
     <tr>
         <td>Log War</td>
         <td><?php if(LOG_WAR == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_WAR == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>     
+				?></td>
+    </tr>
     <tr>
         <td>Log Market</td>
         <td><?php if(LOG_MARKET == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_MARKET == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>     
+				?></td>
+    </tr>
     <tr>
         <td>Log Illegal</td>
         <td><?php if(LOG_ILLEGAL == true) {
 				echo "<b><font color='Green'>Enabled</font></b>";
 				}
 				else if(LOG_ILLEGAL == false){
-				echo "<b><font color='Red'>Disabled</font></b>"; 
+				echo "<b><font color='Red'>Disabled</font></b>";
 				}
-				?></td> 
-    </tr>     
+				?></td>
+    </tr>
        	</table>
-	
+
 <table id="member">
   <thead>
     <tr>
         <th>~ Newsbox Settings ~</th>
     </tr>
   </thead>
-</table>  
-  
-  <table id="profile">  
+</table>
+
+  <table id="profile">
   <tr>
         <td class="b">Variable</td>
-        <td class="b">Value</td> 
-    </tr> 
-	
+        <td class="b">Value</td>
+    </tr>
+
 	<tr>
-		
+
 		<td>Newsbox 1</td>
-		
+
 		<td>
         <?php if(NEWSBOX1 == true){
 				$sts = "selected=\"selected\"";
@@ -314,9 +314,9 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
         </td>
 	</tr>
 	<tr>
-		
+
 		<td>Newsbox 2</td>
-		
+
 		<td>
         <?php if(NEWSBOX2 == true){
 				$sts = "selected=\"selected\"";
@@ -330,12 +330,12 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="false" style="color:Red;" <?php echo $sts2; ?>>Disabled</option>
         </select>
       </td>
-				
+
 	</tr>
 	<tr>
-		
+
 		<td>Newsbox 3</td>
-		
+
 		<td>
         <?php if(NEWSBOX3 == true){
 				$sts = "selected=\"selected\"";
@@ -349,11 +349,11 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="false" style="color:Red;" <?php echo $sts2; ?>>Disabled</option>
         </select>
       </td>
-				
+
 	</tr>
-	
+
 	<td>Home 1</td>
-		
+
 	<td>
         <?php if(HOME1 == true){
 				$sts = "selected=\"selected\"";
@@ -368,9 +368,9 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
         </select>
       </td>
         </tr>
-	
+
 	<td>Home 2</td>
-		
+
 		<td>
         <?php if(HOME2 == true){
 				$sts = "selected=\"selected\"";
@@ -384,11 +384,11 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="false" style="color:Red;" <?php echo $sts2; ?>>Disabled</option>
         </select>
       </td>
-				
+
 	</tr>
-	
+
 	<td>Home 3</td>
-		
+
 		<td>
         <?php if(HOME3 == true){
 				$sts = "selected=\"selected\"";
@@ -402,53 +402,53 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="false" style="color:Red;" <?php echo $sts2; ?>>Disabled</option>
         </select>
       </td>
-				
+
 	</tr>
   </table>
-	
+
 <table id="member">
   <thead>
     <tr>
         <th>~ SQL Settings ~</th>
     </tr>
   </thead>
-<table id="profile">  
+<table id="profile">
   <tr>
         <td class="b">Variable</td>
-        <td class="b">Value</td> 
-    </tr> 
+        <td class="b">Value</td>
+    </tr>
     <tr>
         <td>Hostname</td>
-        <td><?php echo SQL_SERVER;?></td> 
-    </tr>    
+        <td><?php echo SQL_SERVER;?></td>
+    </tr>
 	<tr>
         <td>DB Username</td>
-        <td><?php echo SQL_USER;?></td> 
-    </tr>  
+        <td><?php echo SQL_USER;?></td>
+    </tr>
 	<tr>
         <td>DB Password</td>
-        <td>*********</td> 
-    </tr>  
+        <td>*********</td>
+    </tr>
 	<tr>
         <td>DB Name</td>
-        <td><?php echo SQL_DB;?></td> 
-    </tr>  
+        <td><?php echo SQL_DB;?></td>
+    </tr>
 	<tr>
         <td>Table Prefix</td>
-        <td><?php echo TB_PREFIX;?></td> 
-    </tr> 
+        <td><?php echo TB_PREFIX;?></td>
+    </tr>
 	<tr>
         <td>DB Type</td>
-        <td><?php 
+        <td><?php
                 if(DB_TYPE == 0) {
                 echo "MYSQL";
                 }
                 else if(DB_TYPE == 1) {
                 echo "MYSQLi";
-                } ?></td> 
-    </tr> 
+                } ?></td>
+    </tr>
 	</table>
-	
+
 <table id="member">
 
   <thead>
@@ -461,15 +461,15 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 
   </thead>
 
-<table id="profile">  
+<table id="profile">
 
   <tr>
 
         <td class="b">Variable</td>
 
-        <td class="b">Value</td> 
+        <td class="b">Value</td>
 
-    </tr> 
+    </tr>
 
     <tr>
 
@@ -488,8 +488,8 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 		<option value="false" style="color:Red;" <?php echo $sts2; ?>>Disabled</option>
         </select>
         </td>
-        
-</tr>    
+
+</tr>
 	<tr>
 
         <td>Max number of mails</td>
@@ -499,13 +499,13 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 				}
 				else if(LIMIT_MAILBOX == false){
 				echo "<font color='Gray'>Limit mailbox disabled</font>";
-				} ?></td> 
+				} ?></td>
 
-    </tr>    
+    </tr>
 	<tr>
 
         <td>Include Admin in rank</td>
-        
+
         <td>
         <?php if(INCLUDE_ADMIN == true){
 				$sts = "selected=\"selected\"";
@@ -521,9 +521,9 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
         </td>
 
 
-</tr>    
+</tr>
 	</table>
-	
+
 	<table id="member">
 
   <thead>
@@ -536,15 +536,15 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 
   </thead>
 
-<table id="profile">  
+<table id="profile">
 
   <tr>
 
         <td class="b">Variable</td>
 
-        <td class="b">Value</td> 
+        <td class="b">Value</td>
 
-    </tr> 
+    </tr>
 
     <tr>
 
@@ -555,9 +555,9 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 				}
 				else if(ADMIN_EMAIL != ''){
 				echo "<input name=\"aemail\" class=\"text\" type=\"text\" id=\"aemail\" value=\"".ADMIN_EMAIL."\">";
-				} ?></td> 
+				} ?></td>
 
-    </tr>  
+    </tr>
 	 <tr>
 
         <td>Admin Name</td>
@@ -567,10 +567,10 @@ if ($_SESSON['access'] == MULTIHUNTER) die("<br /><br /><br /><br /><br /><br />
 				}
 				else if(ADMIN_NAME != ''){
 				echo "<input type=\"text\" value=\"".ADMIN_NAME."\" class=\"text\" name=\"aname\" id=\"aname\">";
-				} ?></td> 
+				} ?></td>
 
     </tr>
-</table><Br /><center><button type="submit" value="Submit" class="build">Submit</button></center>	
+</table><Br /><center><button type="submit" value="Submit" class="build">Submit</button></center>
 	</form>
 <?php
 

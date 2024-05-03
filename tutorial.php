@@ -16,19 +16,24 @@
 ##                                                                             ##
 #################################################################################
 
-	if(!isset($_GET['s'])) {
-	$_GET['s'] = ""; }
-	if ($_GET['s'] == "") {
-	include("Templates/Tutorial/1.tpl"); }
-	if ($_GET['s'] == "1") {
-	include("Templates/Tutorial/1.tpl"); }
-	if ($_GET['s'] == "2") {
-	include("Templates/Tutorial/2.tpl"); }
-	if ($_GET['s'] == "3") {
-	include("Templates/Tutorial/3.tpl"); }
-	if ($_GET['s'] == "4") {
-	include("Templates/Tutorial/4.tpl"); }
-	if ($_GET['s'] == "5") {
-	include("Templates/Tutorial/5.tpl"); }
-	
-?>
+if (!isset($_GET['s'])) {
+    $_GET['s'] = "";
+}
+if ($_GET['s'] == "") {
+    include("Templates/Tutorial/1.php");
+}
+if ($_GET['s'] == "1") {
+    include("Templates/Tutorial/1.php");
+}
+if ($_GET['s'] == "2") {
+    include("Templates/Tutorial/2.php");
+}
+if ($_GET['s'] == "3") {
+    include("Templates/Tutorial/3.php");
+}
+if ($_GET['s'] == "4") {
+    include("Templates/Tutorial/4.php");
+}
+if ($_GET['s'] == "5") {
+    include("Templates/Tutorial/5.php");
+}

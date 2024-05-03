@@ -30,7 +30,7 @@ class Process
         global $database;
         $myFile = "include/constant.php";
         $fh = fopen($myFile, 'w') or die("<br/><br/><br/>Can't open file: install\include\constant.php");
-        $text = file_get_contents("data/constant_format.tpl");
+        $text = file_get_contents("data/constant_format.php");
         $text = preg_replace("'%TRADERCAP%'", $_POST['tradercap'], $text);
         $text = preg_replace("'%CRANNYCAP%'", $_POST['crannycap'], $text);
         $text = preg_replace("'%TRAPPERCAP%'", $_POST['trappercap'], $text);
@@ -59,7 +59,7 @@ class Process
 
         $myFile = "include/connection.php";
         $fh = fopen($myFile, 'w') or die("<br/><br/><br/>Can't open file: install\include\connection.php");
-        $text = file_get_contents("data/connection.tpl");
+        $text = file_get_contents("data/connection.php");
         $text = preg_replace("'%SSERVER%'", $_POST['sserver'], $text);
         $text = preg_replace("'%SUSER%'", $_POST['suser'], $text);
         $text = preg_replace("'%SPASS%'", $_POST['spass'], $text);

@@ -16,57 +16,54 @@ include("GameEngine/config.php");
 ?>
 
 <html>
-	<head>
-	<title><?php echo SERVER_NAME; ?></title>
-        <link REL="shortcut icon" HREF="favicon.ico"/>
-	<meta name="content-language" content="en" />
-	<meta http-equiv="cache-control" content="max-age=0" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<script src="mt-core.js?0faaa" type="text/javascript"></script>
-	<script src="mt-more.js?0faaa" type="text/javascript"></script>
-	<script src="unx.js?0faaa" type="text/javascript"></script>
-	<script src="new.js?0faaa" type="text/javascript"></script>
-<!--    TODO - We need a lang pack for en, only one there is ir -->
-<!--   	<link href="<?php echo GP_LOCATE; ?>lang/en/compact.css?f4b7c" rel="stylesheet" type="text/css" />-->
-<!--   	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css?f4b7c" rel="stylesheet" type="text/css" />-->
-<!--	<link href="<?php echo GP_LOCATE; ?>travian.css?f4b7c" rel="stylesheet" type="text/css" />-->
-<!--    	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css" rel="stylesheet" type="text/css" />	-->
-       </head>
-<!--    <body class="manual">-->
-    <body style="background-color:white;">
-<?php
 
-if (!ctype_digit($_GET['s'])) {
-	$_GET['s'] = "0";
-}
-if (!ctype_digit($_GET['typ'])) {
-	$_GET['typ'] = null;
-}
-if(!isset($_GET['typ']) && !isset($_GET['s'])) {
-	include("Templates/Manual/00.tpl");
-}
-else if (!isset($_GET['typ']) && $_GET['s'] == 1) {
-	include("Templates/Manual/00.tpl");
-}
-else if (!isset($_GET['typ']) && $_GET['s'] == 2) {
-	include("Templates/Manual/direct.tpl");
-}
-else if (isset($_GET['typ']) && $_GET['typ'] == 5 && $_GET['s'] == 3) {
-	include("Templates/Manual/medal.tpl");
-}
-else {
-	if(isset($_GET['gid'])) {
-		include("Templates/Manual/".$_GET['typ'].($_GET['gid']).".tpl");
-	}
-	else {
-		if($_GET['typ'] == 4 && $_GET['s'] == 0) {
-			$_GET['s'] = 1;
-		}
-	include("Templates/Manual/".$_GET['typ'].$_GET['s'].".tpl");
-	}
-}
-?>
+<head>
+    <title><?php echo SERVER_NAME; ?></title>
+    <link REL="shortcut icon" HREF="favicon.ico" />
+    <meta name="content-language" content="en" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="mt-core.js?0faaa" type="text/javascript"></script>
+    <script src="mt-more.js?0faaa" type="text/javascript"></script>
+    <script src="unx.js?0faaa" type="text/javascript"></script>
+    <script src="new.js?0faaa" type="text/javascript"></script>
+    <!--    TODO - We need a lang pack for en, only one there is ir -->
+    <!--   	<link href="<?php echo GP_LOCATE; ?>lang/en/compact.css?f4b7c" rel="stylesheet" type="text/css" />-->
+    <!--   	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css?f4b7c" rel="stylesheet" type="text/css" />-->
+    <!--	<link href="<?php echo GP_LOCATE; ?>travian.css?f4b7c" rel="stylesheet" type="text/css" />-->
+    <!--    	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css" rel="stylesheet" type="text/css" />	-->
+</head>
+<!--    <body class="manual">-->
+
+<body style="background-color:white;">
+    <?php
+
+    if (!ctype_digit($_GET['s'])) {
+        $_GET['s'] = "0";
+    }
+    if (!ctype_digit($_GET['typ'])) {
+        $_GET['typ'] = null;
+    }
+    if (!isset($_GET['typ']) && !isset($_GET['s'])) {
+        include("Templates/Manual/00.php");
+    } else if (!isset($_GET['typ']) && $_GET['s'] == 1) {
+        include("Templates/Manual/00.php");
+    } else if (!isset($_GET['typ']) && $_GET['s'] == 2) {
+        include("Templates/Manual/direct.php");
+    } else if (isset($_GET['typ']) && $_GET['typ'] == 5 && $_GET['s'] == 3) {
+        include("Templates/Manual/medal.php");
+    } else {
+        if (isset($_GET['gid'])) {
+            include("Templates/Manual/" . $_GET['typ'] . ($_GET['gid']) . ".php");
+        } else {
+            if ($_GET['typ'] == 4 && $_GET['s'] == 0) {
+                $_GET['s'] = 1;
+            }
+            include("Templates/Manual/" . $_GET['typ'] . $_GET['s'] . ".php");
+        }
+    }
+    ?>
 </body>
 
 </html>

@@ -264,6 +264,8 @@ class Account {
 		$message->sendWelcome($uid,$username);
 	}
 	
-};
+}
+
 $account = new Account;
+
 ?>
